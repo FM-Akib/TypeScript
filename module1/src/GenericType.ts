@@ -93,9 +93,29 @@
 
 
 
+    //Function with Generic
+    const createArrayWithGeneric = <T>(value:T):T[]=>{
+        return [value]
+    }
+    const res = createArrayWithGeneric<string>("Fahim")
+    
+
+    //tuple
+    const createArrayWithTuple = <T,Q>(param1:T,param2:Q):[T,Q]=>{
+        return [param1, param2]
+    }
+    
+    const res2 = createArrayWithTuple<string,number>("Fahim", 20)
+    console.log(res2)
 
 
+    const addCourseToStudent = <T>(student:T)=>{
+        const course = "Next Level Web Development"
+        return {...student, course}
+    }
 
+    const student1 = addCourseToStudent({name:"Yamin", roll: 12, contact:"01912345678", gender:"Male"})
+    console.log(student1)
 
 
 }
