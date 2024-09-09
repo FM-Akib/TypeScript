@@ -6,7 +6,7 @@
             resolve(data)
           }
           else {
-            reject("Failed To Load Data!")
+            reject("Failed To Load Data!!")
           }
         })
 
